@@ -48,6 +48,13 @@ body {
   width: 276px;
   height: 45px;
   flex-shrink: 0;
+  text-decoration: none;
+}
+.site-name:hover {
+  opacity: 0.8;
+}
+.site-name:active {
+  opacity: 0.6;
 }
 .currency {
   color: #555;
@@ -62,21 +69,22 @@ body {
 .dollar {
   margin-right: 25px;
 }
-.search-area {
-  display: flex;
-  justify-content: start;
-  align-items: center;
+.search-form {
+  margin-left: auto;
+  margin-right: 25px;
+}
+.search-form-input {
   width: 275px;
-  height: 45px;
-  flex-shrink: 0;
+  border: 0;
   border-radius: 60px;
-  background: #fff;
+  background-color: #fff;
   color: #8d8d8d;
   font-size: 14px;
   line-height: normal;
-  margin-left: 247px;
-  margin-right: 25px;
-  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 13px;
+  padding-left: 41px;
 }
 .search-icon {
   margin-right: 6px;
@@ -84,29 +92,29 @@ body {
   height: 20px;
 }
 .lang {
-  width: 70px;
-  height: 36px;
   flex-shrink: 0;
   border-radius: 39px;
   background: #dce6ff;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #a6a6a6;
   font-size: 13px;
   font-weight: 400;
   line-height: normal;
   margin-right: 25px;
+  padding: 3px;
 }
-.lang-uz {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
+.lang-togger {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  flex-shrink: 0;
+  color: #a6a6a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.lang-uz {
   background-color: #fff;
   color: #000;
 }
@@ -120,36 +128,53 @@ body {
   font-weight: 500;
   line-height: normal;
 }
-
-/* MAIN */
+.button:hover {
+  opacity: 0.8;
+}
+.button:active {
+  opacity: 0.6;
+}
+.header-nav {
+  background-color:#fff;
+}
 .sitenav-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   padding-left: 0;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  margin: 0;
+  padding-top: 26px;
+  padding-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #d1d1d1;
+}
+.sitenav-list li {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .sitenav-list li:not(:last-child) {
   flex-grow: 1;
 }
-.sitnav-link {
+.sitenav-link {
   text-decoration: none;
   color: #7f7f7f;
   font-size: 18px;
   font-weight: 500;
   line-height: normal;
+  transition: color 0.4s ease;
 }
-.sitenav-divider {
-  width: 1200px;
-  height: 0px;
-  flex-shrink: 0;
-  margin-top: 0;
-  margin-bottom: 40px;
+.sitenav-link:hover {
+  color:#7296ec;
+}
+.sitenav-link:active {
+  opacity: 0.8;
+}
+.header-advert {
+  display: flex;
 }
 
+/* MAIN */
 /* LAST-NEWS-SECTION */
 .last-news-section {
   display: flex;
@@ -166,16 +191,25 @@ body {
   background: #f6f6f6;
   margin-right: 10px;
   margin-bottom: 10px;
-  height: 382px;
 }
 .last-news-header {
-  width: 358px;
+  width: 338px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.last-news-header-link {
   color: #000;
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
-  margin-top: 0;
-  margin-bottom: 10px;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+.last-news-header-link:hover {
+  color:#7296ec;
+}
+.last-news-header-link:active {
+  opacity: 0.8;
 }
 .news-text {
   width: 346px;
@@ -205,7 +239,7 @@ body {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  background-color: #e8b690;
+  background-color: #e8b69079;
   border-radius: 8px;
   margin-bottom: 60px;
 }
@@ -226,6 +260,14 @@ body {
   border-radius: 10px;
   background-color: #f78b3b;
   text-decoration: none;
+  border:0;
+  cursor: pointer;
+}
+.notification-button:hover {
+  opacity: 0.8;
+}
+.notification-button:active {
+  opacity: 0.6;
 }
 
 /* GLOBAL-NEWS-SECTION */
@@ -264,14 +306,25 @@ body {
   margin-left: 15px;
 }
 
-.global-news-item-header {
+.global-news-item-link {
   width: 535px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.global-news-item-link {
   color: #000;
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
-  margin-top: 0;
-  margin-bottom: 10px;
+  text-decoration: none;
+  display: block;
+  transition: color 0.4s ease;
+}
+.global-news-item-link:hover {
+  color: #7296ec;
+}
+.global-news-item-link:active {
+  opacity: 0.8;
 }
 .global-news-item-text {
   width: 535px;
@@ -279,10 +332,9 @@ body {
   margin-bottom: 17px;
 }
 .more-info-button {
-  display: inline-block;
   padding: 17px 343px;
-  align-items: flex-start;
   border-radius: 10px;
+  border: 0;
   background: #eaeaea;
   color: #000;
   font-weight: 500;
@@ -290,6 +342,13 @@ body {
   text-decoration: none;
   margin-top: 5px;
   margin-bottom: 100px;
+  cursor:pointer;
+}
+.more-info-button:hover {
+  opacity: 0.8;
+}
+.more-info-button:active {
+  opacity: 0.6;
 }
 .news-header {
   color: #000;
@@ -305,7 +364,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   width: 393px;
-  height: 502px;
   flex-shrink: 0;
   border-radius: 15px;
   background: #f6f6f6;
@@ -315,26 +373,38 @@ body {
   padding-bottom: 20px;
   padding-left: 17px;
 }
+.main-news-content-item {
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
 .main-news-header {
-  width: 311px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.main-news-item-link {
   color: #000;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
-  margin-top: 0;
-  margin-bottom: 8px;
+  text-decoration: none;
+  display: block;
+  transition: color 0.4s ease;
+}
+.main-news-item-link:hover {
+  color: #7296ec;
+}
+.main-news-item-link:active {
+  opacity: 0.8;
 }
 .main-news-source {
   color: #5e5f61;
   font-size: 13px;
   line-height: normal;
+  display: block;
 }
-.main-news-divider {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 359px;
-  height: 0px;
-  flex-shrink: 0;
+.main-news-advert {
+  display: flex;
 }
 
 
@@ -345,14 +415,21 @@ body {
 .footer-container {
   width: 100%;
   max-width: 998px;
+  padding-top: 40px;
 }
 .footer-site-name {
+  text-decoration: none;
   color: #FFF;
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
   margin: 0;
-  padding-top: 40px;
+}
+.footer-site-name:hover {
+  opacity: 0.8;
+}
+.footer-site-name:active {
+  opacity: 0.6;
 }
 .footer-nav-list {
   display: flex;
@@ -387,6 +464,12 @@ body {
   color: #fff;
   font-weight: 500;
   line-height: normal;
+}
+.footer-link:hover {
+  opacity: 0.8;
+}
+.footer-link:active {
+  opacity: 0.6;
 }
 .footer-divider {
   height: 1px;
@@ -427,4 +510,10 @@ body {
 }
 .link-icons {
   display: block;
+}
+.link-icons:hover {
+  opacity: 0.8;
+}
+.link-icons:active {
+  opacity: 0.6;
 }
