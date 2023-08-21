@@ -77,7 +77,10 @@ body {
   width: 275px;
   border: 0;
   border-radius: 60px;
-  background-color: #fff;
+  background-image: url("../img/search-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 15px center;
   color: #8d8d8d;
   font-size: 14px;
   line-height: normal;
@@ -85,11 +88,6 @@ body {
   padding-right: 20px;
   padding-bottom: 13px;
   padding-left: 41px;
-}
-.search-icon {
-  margin-right: 6px;
-  width: 20px;
-  height: 20px;
 }
 .lang {
   flex-shrink: 0;
@@ -119,12 +117,11 @@ body {
   color: #000;
 }
 .button {
-  width: 89px;
   padding: 13px 20px;
   border-radius: 10px;
   background: #7296ec;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   font-weight: 500;
   line-height: normal;
 }
@@ -172,6 +169,7 @@ body {
 }
 .header-advert {
   display: flex;
+  margin-bottom: 50px;
 }
 
 /* MAIN */
@@ -181,7 +179,7 @@ body {
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 0;
   margin-bottom: 50px;
 }
 .last-news {
@@ -239,7 +237,8 @@ body {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  background-color: #e8b69079;
+  background-image: url("../img/notification-bckg.png");
+  background-size: contain;
   border-radius: 8px;
   margin-bottom: 60px;
 }
@@ -295,7 +294,6 @@ body {
   align-items: center;
   width: 797px;
   height: 205px;
-  flex-shrink: 0;
   border-radius: 15px;
   background: #f6f6f6;
   margin-bottom: 10px;
@@ -306,7 +304,7 @@ body {
   margin-left: 15px;
 }
 
-.global-news-item-link {
+.global-news-item-header {
   width: 535px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -317,7 +315,7 @@ body {
   font-weight: 500;
   line-height: 26px;
   text-decoration: none;
-  display: block;
+  display: flex;
   transition: color 0.4s ease;
 }
 .global-news-item-link:hover {
@@ -330,6 +328,7 @@ body {
   width: 535px;
   margin-top: 0;
   margin-bottom: 17px;
+  display: block;
 }
 .more-info-button {
   padding: 17px 343px;
@@ -516,4 +515,112 @@ body {
 }
 .link-icons:active {
   opacity: 0.6;
+}
+
+/* CONTACT-PAGE */
+.contact-title {
+  margin-top: 20px;
+}
+.form-adress-wrapper {
+  display: flex;
+  padding-bottom: 100px;
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+.name-number {
+  display: flex;
+}
+.fill-name {
+  margin-right: 10px;
+}
+.gaps {
+  display: block;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 19px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  background: #fff;
+  width: 343px;
+}
+.fill-email {
+  width: 696px;
+  margin-top: 10px;
+}
+textarea {
+  width: 100%;
+  display: block;
+  min-height: 180px;
+  resize: vertical;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  background-color: #fff;
+  padding-top: 18px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.contact-button {
+  display: inline-flex;
+  padding: 17px 30px;
+  align-items: flex-start;
+  background: #7297ef;
+  border: 0;
+  cursor: pointer;
+}
+.adresses {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 494px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #f6f6f6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 25px;
+  margin: 0;
+}
+.adresses-list {
+  list-style: none;
+  border-bottom: 1px solid #d2d2d2;
+  margin-bottom: 20px;
+  width: 444px;
+  padding-bottom: 20px;
+}
+.adresses-list:last-child {
+  border: 0;
+  margin: 0;
+  padding-bottom: 0;
+}
+.adress-name {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+.adress-content {
+  color: #000;
+  line-height: normal;
+  display: block;
+}
+
+/* BACKGROUND-IMAGE-FOR-RETINA */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .notification-section {
+    background-image: url("../img/notification-bckg@2x.png");
+  }
 }
